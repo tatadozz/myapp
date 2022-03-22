@@ -1,7 +1,7 @@
 import firebase from "firebase/compat/app"
 import "firebase/compat/storage"
 import "firebase/compat/firestore"
-
+import { auth } from "firebaseui";
 
 export const app = firebase.initializeApp({
     "projectId": "projet-iutlpdim-lefief",
@@ -14,9 +14,21 @@ export const app = firebase.initializeApp({
     "measurementId": "G-TX1G506K6P"
   });
 
-  //mettre dans le composant qui utilise le storage
+  export const configUi = {
+    signInFlow: 'popup',
+    signInOptions: [
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.PhoneAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+        signInSuccessWithAuthResult: function() {
+            window.history.back();
+            console.log(firebase.auth().currentUser.displayName);
+            console.log(firebase.auth().currentUser.email);
+        }
+    }
+  }
+
 var storage = firebase.storage();
-
 export default storage;
-
-//export app

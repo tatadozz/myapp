@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './routes/login';
-import Register from './routes/register';
 import {
   BrowserRouter,
   Routes,
@@ -14,9 +13,9 @@ import {
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
+      <Route path="/" element={<App/>} />
       <Route path="login" element={<Login />} />
     </Routes>
-    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );
