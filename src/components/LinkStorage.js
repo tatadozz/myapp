@@ -17,7 +17,7 @@ export class LinkStorage extends Component{
     render(){
         let downloadURL = this.state.downloadURL;
         let defaultStorage = getStorage(app);
-        let fileRef = ref(defaultStorage,'CV_LEFIEF.pdf');
+        let fileRef = ref(defaultStorage, 'CV_LEFIEF.pdf');
 
         if(downloadURL === '#' || downloadURL === ''){
             getDownloadURL(fileRef).then((downloadURL) => {
@@ -31,7 +31,7 @@ export class LinkStorage extends Component{
 
         return(
             <div>
-                <a className="text-2xl border-r-8" id="linkDownloadCv" href="#waitingValue" target="_blank">
+                <a className="text-2xl bg-blue-300 rounded-xl py-4 px-8" id="linkDownloadCv" href="#waitingValue" target="_blank">
                     Télécharger le CV
                 </a>
             </div>

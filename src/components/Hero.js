@@ -9,8 +9,8 @@ function Hero(){
             <div className="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6">
                 <p className="uppercase tracking-loose">Clément LEFIEF</p>
                 <h1 className="font-bold text-3xl my-4">Développeur Web et Mobile</h1>
-                <p className="leading-normal mb-4">Je fais de mon métier ma passion. Mon but premier étant de concevoir et développeur des applications web et mobiles correspondant au maximum au besoin client.</p>
-                        <LinkStorage />
+                <p className="leading-normal mb-12">Je fais de mon métier ma passion. Mon but premier étant de concevoir et développeur des applications web et mobiles correspondant au maximum au besoin client.</p>
+                <LinkStorage />
                    
             </div>
             <div className="w-full lg:w-1/2 lg:py-6 text-center">
