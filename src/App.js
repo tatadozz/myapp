@@ -2,7 +2,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import { useState } from 'react';
-import storage from './firebaseConf';
+import {storage} from './firebaseConf';
+import Projects from './components/Projects';
 
 function App() {
   const [image, setImage] = useState('');
@@ -29,6 +30,7 @@ function App() {
     <div className="App">
         <Navbar />
         <Hero />
+        <Projects />
         <div className='bg-navy-500'>
           <h2 className='text-2xl'>Faites moi parvenir votre offre ci dessous !</h2>
         </div>

@@ -1,43 +1,13 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { app, configUi } from "../firebaseConf";
 import firebase from "firebase/compat/app";
 import 'firebase/compat/auth';
+import { ThisIsStatusAuth } from "./ThisIsStatusAuth";
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
-    var user = firebase.auth().currentUser;
-
-    function status(user){
-        var name, email;
-        if(user != null){
-            name = user.displayName;
-            email = user.email;
-            return (
-                <div>
-                    <p className="text-white">Bonjour {name} ! 
-                        <small>
-                            <button onClick={() => firebase.auth().signOut().then(function() {
-                            console.log('Signed Out');
-                            console.log(firebase.auth().currentUser.displayName);
-                                }, function(error) {
-                            console.error('Sign Out Error', error);
-                                })}>
-                            Se déconnecter
-                            </button>
-                        </small>
-                    </p>
-                </div>
-            )
-        }
-        return (
-            <div>
-                <Link style={{color: "white"}} to="/login">Login</Link>
-            </div>
-        )
-    }
-
     return(
             <nav className="bg-gray-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,10 +22,7 @@ function Navbar(){
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
-                                    {status(user)}
-                            </div>
-                            <div>
-                                {/* <p>connecté en tant que </p>{firebase.auth()} */}
+                                    <ThisIsStatusAuth />
                             </div>
                         </div>
                     </div>

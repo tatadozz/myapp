@@ -1,4 +1,5 @@
 import React from "react";
+import { LinkStorage } from "./LinkStorage";
 
 function Hero(){
 
@@ -9,10 +10,7 @@ function Hero(){
                 <p className="uppercase tracking-loose">Clément LEFIEF</p>
                 <h1 className="font-bold text-3xl my-4">Développeur Web et Mobile</h1>
                 <p className="leading-normal mb-4">Je fais de mon métier ma passion. Mon but premier étant de concevoir et développeur des applications web et mobiles correspondant au maximum au besoin client.</p>
-                        <a className="bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent" 
-                            href="https://firebasestorage.googleapis.com/v0/b/projet-iutlpdim-lefief.appspot.com/o/images%2FCV_LEFIEF.pdf?alt=media&token=041e6bea-3224-4125-9a41-d7b33517006b" target="_blank" download>
-                             Télécharger mon CV
-                        </a>
+                        <LinkStorage />
                    
             </div>
             <div className="w-full lg:w-1/2 lg:py-6 text-center">

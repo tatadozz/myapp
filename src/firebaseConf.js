@@ -23,12 +23,11 @@ export const app = firebase.initializeApp({
     ],
     callbacks: {
         signInSuccessWithAuthResult: function() {
-            window.history.back();
-            console.log(firebase.auth().currentUser.displayName);
-            console.log(firebase.auth().currentUser.email);
+            window.history.back();  
         }
     }
   }
+  
+  export const db = firebase.firestore();
 
-var storage = firebase.storage();
-export default storage;
+  export var storage = firebase.storage();
