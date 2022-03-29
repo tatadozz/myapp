@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Login from './routes/login';
+import AddProject from './components/AddProject'
 import {
   BrowserRouter,
   Routes,
@@ -15,6 +16,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App/>} />
       <Route path="login" element={<Login />} />
+      <Route path="add_project" element={<AddProject />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

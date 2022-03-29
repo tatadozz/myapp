@@ -12,10 +12,10 @@ function Projects(){
         .collection("projets")
         .onSnapshot((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-            getProjectsFromFirebase.push({
-                ...doc.data(), //spread operator
-                key: doc.id, // `id` given to us by Firebase
-            });
+                getProjectsFromFirebase.push({
+                    ...doc.data(),
+                    key: doc.id,
+                });
             });
             setProjects(getProjectsFromFirebase);
             setLoading(false);

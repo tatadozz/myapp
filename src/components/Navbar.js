@@ -23,7 +23,9 @@ function Navbar(){
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
                                     <ThisIsStatusAuth />
-                            </div>
+                                    <Link style={{color: "white"}} to="/add_project">Ajouter un projet</Link>
+                                </div>
+                                
                         </div>
                     </div>
                     <div className="-mr-2 flex md:hidden">
